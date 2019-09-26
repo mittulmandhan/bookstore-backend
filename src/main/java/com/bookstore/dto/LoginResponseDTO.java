@@ -4,68 +4,68 @@ import java.util.List;
 
 public class LoginResponseDTO {
 
-	private int UserId;
-	private String Username;
-	private String ContactNo;
-	private String Address;
-	private String Name;
-	private String Token;
-	private List<String> Roles;
+	private int userId;
+	private String username;
+	private String contactNo;
+	private String address;
+	private String name;
+	private String token;
+	private List<String> roles;
 
 	public int getUserId() {
-		return UserId;
+		return userId;
 	}
 
 	public void setUserId(int userId) {
-		UserId = userId;
+		this.userId = userId;
 	}
 
 	public String getUsername() {
-		return Username;
+		return username;
 	}
 
 	public void setUsername(String username) {
-		Username = username;
+		this.username = username;
 	}
 
 	public String getContactNo() {
-		return ContactNo;
+		return contactNo;
 	}
 
 	public void setContactNo(String contactNo) {
-		ContactNo = contactNo;
+		this.contactNo = contactNo;
 	}
 
 	public String getAddress() {
-		return Address;
+		return address;
 	}
 
 	public void setAddress(String address) {
-		Address = address;
+		this.address = address;
 	}
 
 	public String getName() {
-		return Name;
+		return name;
 	}
 
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
 
 	public String getToken() {
-		return Token;
+		return token;
 	}
 
 	public void setToken(String token) {
-		Token = token;
+		this.token = token;
 	}
 
 	public List<String> getRoles() {
-		return Roles;
+		return roles;
 	}
 
 	public void setRoles(List<String> roles) {
-		Roles = roles;
+		this.roles = roles;
 	}
 
 }

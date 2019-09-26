@@ -6,20 +6,20 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.bookstore.dto.LoginResponseDTO;
 import com.bookstore.dto.SignupRequestDTO;
-import com.bookstore.service.LoginService;
+import com.bookstore.dto.SignupResponseDTO;
+import com.bookstore.service.SignupService;
 
 @CrossOrigin
 @RestController
 public class MockSignupController {
-	
+
 	@Autowired
 	private SignupService signupService;
-	
+
 	@PostMapping(path = "/signup")
-	public LoginResponseDTO authenticateUser(@RequestBody SignupRequestDTO requestDTO) {
+	public SignupResponseDTO authenticateUser(@RequestBody SignupRequestDTO requestDTO) {
 		System.out.println(requestDTO.getUsername() + " , " + requestDTO.getPassword());
-		return signupService.authenticateUser(requestDTO);
+		return signupService.registerUser(requestDTO);
 	}
 }

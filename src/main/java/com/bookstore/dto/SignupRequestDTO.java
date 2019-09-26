@@ -7,6 +7,7 @@ public class SignupRequestDTO {
 	private String ContactNo;
 	private String Address;
 	private String Name;
+	
 	public String getUsername() {
 		return Username;
 	}

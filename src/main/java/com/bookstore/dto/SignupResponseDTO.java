@@ -2,8 +2,9 @@ package com.bookstore.dto;
 
 import java.util.List;
 
+import org.springframework.context.annotation.Primary;
+
 public class SignupResponseDTO {
-	
 	private int UserId;
 	private String Username;
 	private String ContactNo;
