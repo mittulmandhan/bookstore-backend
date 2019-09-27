@@ -20,9 +20,12 @@ public class LoginService {
 		response.setUserId(234);
 		response.setAddress("Delhi");
 		response.setContactNo("9211111875");
-		response.setName("Pawan ");
-		response.setRoles(Arrays.asList("Admin"));
-		response.setToken("7648217468724682734682");
+		response.setName(requestDTO.getUsername());
+		if(requestDTO.getUsername().equals("Admin"))
+			response.setRoles(Arrays.asList("Admin"));
+		else
+			response.setRoles(Arrays.asList("User"));
+		response.setToken("764821746872468273");
 		return response;
 	}
 
