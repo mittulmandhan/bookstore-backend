@@ -11,18 +11,14 @@ import com.bookstore.dto.SignupResponseDTO;
 public class SignupService {
 
 	public SignupResponseDTO registerUser(SignupRequestDTO requestDTO) {
-		return getResponseObject(requestDTO);
-	}
-
-	private SignupResponseDTO getResponseObject(SignupRequestDTO requestDTO) {
-		SignupResponseDTO response = new SignupResponseDTO();
-		response.setUsername(requestDTO.getUsername());
-		response.setUserId(234);
-		response.setAddress("Delhi");
-		response.setContactNo("9211111875");
-		response.setName("Pawan ");
-		response.setRoles(Arrays.asList("Admin"));
-		response.setToken("7648217468724682734682");
-		return response;
+		SignupResponseDTO responseDTO = new SignupResponseDTO();
+		responseDTO.setUserId(1);
+		responseDTO.setName(requestDTO.getName());
+		responseDTO.setAddress(requestDTO.getAddress());
+		responseDTO.setContactNo(requestDTO.getContactNo());
+		responseDTO.setRoles(Arrays.asList("Admin"));
+		responseDTO.setToken("7648217468724682734682");
+		requestDTO.setPassword("123456");
+		return responseDTO;
 	}
 }
