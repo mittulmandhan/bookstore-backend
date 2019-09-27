@@ -1,12 +1,14 @@
 package com.bookstore.dto;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class CreateProductResponseDTO {
 	private int productId;
 	private String categoryId;
 	private String name;
 	private String description;
 	private String unitPrice;
-	private String file;
+	private MultipartFile file;
 
 	public int getProductId() {
 		return productId;
@@ -48,11 +50,11 @@ public class CreateProductResponseDTO {
 		this.unitPrice = unitPrice;
 	}
 
-	public String getFile() {
+	public MultipartFile getFile() {
 		return file;
 	}
 
-	public void setFile(String file) {
+	public void setFile(MultipartFile file) {
 		this.file = file;
 	}
 
