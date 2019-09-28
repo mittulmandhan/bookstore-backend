@@ -56,6 +56,7 @@ public class JwtTokenUtil implements Serializable {
 	}
 
 	//generate token for user
+	@SuppressWarnings("unchecked")
 	public String generateToken(UserDetails userDetails) {
 		Map<String, Object> claims = new HashMap<>();
 		Set<Authority> auth = (Set<Authority>)userDetails.getAuthorities();
